@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "outDir": ".test-dist",
+    "rootDir": ".",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "types": ["node"],
+    "noEmit": false,
+    "incremental": false
+  },
+  "include": [
+    "lib/heritage/types.ts",
+    "lib/heritage/sites.ts",
+    "lib/heritage/sources.ts",
+    "lib/heritage/query.ts",
+    "lib/travel/types.ts",
+    "lib/travel/scoring.ts",
+    "lib/travel/optimizer.ts",
+    "lib/travel/validate.ts",
+    "tests/**/*.test.ts"
+  ]
+}

@@ -1,0 +1,10 @@
+.git
+.next
+.next-*
+.test-dist
+node_modules
+.env*
+!.env.example
+.DS_Store
+npm-debug.log*
+pnpm-debug.log*

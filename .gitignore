@@ -1,0 +1,21 @@
+# v0 sandbox internal files
+__v0_runtime_loader.js
+__v0_devtools.tsx
+__v0_jsx-dev-runtime.ts
+.snowflake/
+.v0-trash/
+.vercel/
+
+# Environment variables
+.env*.local
+
+# Common ignores
+node_modules
+.next/
+# Any alternate build output (NEXT_DIST_DIR in next.config.mjs). Tailwind scans
+# every non-ignored file for class candidates, and Turbopack's binary cache inside
+# a build directory yields garbage ones that break the CSS build.
+.next-*/
+.test-dist/
+*.tsbuildinfo
+.DS_Store

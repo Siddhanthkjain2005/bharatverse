@@ -1,0 +1,160 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-sans: var(--font-interface), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-display), ui-serif, Georgia, serif;
+  --font-mono: ui-monospace, SFMono-Regular, monospace;
+
+  --radius-sm: calc(var(--radius) * 0.5);
+  --radius-md: calc(var(--radius) * 0.75);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.5);
+  --radius-2xl: calc(var(--radius) * 2);
+}
+
+:root {
+  color-scheme: dark;
+
+  /* Neutrals — charcoal / midnight / warm ivory */
+  --background: oklch(0.16 0.011 62);
+  --foreground: oklch(0.93 0.018 84);
+  --card: oklch(0.21 0.014 62);
+  --card-foreground: oklch(0.93 0.018 84);
+  --popover: oklch(0.19 0.013 62);
+  --popover-foreground: oklch(0.93 0.018 84);
+  --muted: oklch(0.26 0.014 62);
+  --muted-foreground: oklch(0.7 0.018 78);
+
+  /* Brand — copper / terracotta */
+  --primary: oklch(0.63 0.135 44);
+  --primary-foreground: oklch(0.16 0.011 62);
+
+  /* Accent — muted gold */
+  --accent: oklch(0.79 0.104 82);
+  --accent-foreground: oklch(0.16 0.011 62);
+
+  /* Support — deep indigo */
+  --secondary: oklch(0.31 0.062 273);
+  --secondary-foreground: oklch(0.93 0.018 84);
+
+  --destructive: oklch(0.62 0.19 26);
+  --border: oklch(0.93 0.018 84 / 12%);
+  --input: oklch(0.93 0.018 84 / 16%);
+  --ring: oklch(0.63 0.135 44 / 60%);
+
+  --radius: 0.25rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/60;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: oklch(0.63 0.135 44 / 35%);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer utilities {
+  .label-meta {
+    @apply font-sans text-[0.6875rem] uppercase tracking-[0.22em] text-muted-foreground;
+  }
+  .display {
+    @apply font-serif font-light tracking-[-0.02em];
+  }
+  .rule {
+    @apply h-px w-full bg-border;
+  }
+  /* Monument names in their own scripts: Devanagari, Kannada, Odia, Tamil. */
+  .local-name {
+    font-family:
+      var(--font-indic), var(--font-kannada), var(--font-odia),
+      var(--font-tamil), var(--font-interface), sans-serif;
+  }
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.28;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+  }
+  .vignette::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(
+      ellipse at 50% 45%,
+      transparent 35%,
+      oklch(0.12 0.01 62 / 0.85) 100%
+    );
+  }
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: oklch(0.63 0.135 44 / 0.5) transparent;
+  }
+}
+
+@keyframes bv-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes bv-pulse-ring {
+  0% {
+    opacity: 0.7;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.4);
+  }
+}
+
+@keyframes bv-sweep {
+  0% {
+    transform: translateX(-110%);
+  }
+  100% {
+    transform: translateX(210%);
+  }
+}
