@@ -78,7 +78,14 @@ export interface InteriorSpace {
   name: string
   /** Parent node in the interior room graph (§19). */
   parentId: string | null
-  kind: 'ENTRANCE' | 'COURTYARD' | 'HALL' | 'SANCTUM' | 'GALLERY' | 'CHAMBER' | 'TERRACE'
+  kind:
+    | 'ENTRANCE'
+    | 'COURTYARD'
+    | 'HALL'
+    | 'SANCTUM'
+    | 'GALLERY'
+    | 'CHAMBER'
+    | 'TERRACE'
   /** Footprint on the interior floor plan, normalised 0–1. */
   plan: { x: number; y: number; w: number; h: number }
   narrative: string
@@ -146,7 +153,15 @@ export interface ConservationProfile {
 
 export interface TwinAsset {
   /** Which visual archetype the procedural twin uses. */
-  archetype: 'TOMB_DOME' | 'SHIKHARA' | 'MINARET' | 'ROCK_CUT' | 'CHARIOT' | 'GOPURAM' | 'RUIN_COMPLEX'
+  archetype:
+    | 'TOMB_DOME'
+    | 'SHIKHARA'
+    | 'MINARET'
+    | 'ROCK_CUT'
+    | 'CHARIOT'
+    | 'GOPURAM'
+    | 'RED_FORT'
+    | 'RUIN_COMPLEX'
   provenance: ProvenanceType
   provenanceNote: string
   interiorLevel: InteriorLevel

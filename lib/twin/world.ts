@@ -59,6 +59,7 @@ const TERRAIN_AMP: Record<string, number> = {
   COASTAL: 1.8,
   BOULDER_FIELD: 6.5,
   PLAZA: 1.6,
+  FORT_BASTION: 1.6,
 }
 
 export function buildWorld(site: HeritageSite): WorldModel {
@@ -232,6 +233,9 @@ export function buildWorld(site: HeritageSite): WorldModel {
     for (const wing of c.wings) {
       collision.addSlab(wing.x, wing.z, wing.w, wing.d, 0, wing.h, 'MASS')
     }
+  }
+  for (const bn of env.bastions) {
+    collision.addCylinder(bn.x, bn.z, bn.r * 1.2, 0, bn.h, 'MASS')
   }
 
   const blocked = makeBlocker(

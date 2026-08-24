@@ -79,6 +79,16 @@ export const SOURCES: SourceRef[] = [
     scope: 'SITE',
   },
   {
+    id: 'unesco-231',
+    title: 'Red Fort Complex — ref. 231',
+    publisher: 'UNESCO World Heritage Centre',
+    url: 'https://whc.unesco.org/en/list/231/',
+    license: 'UNESCO terms of use',
+    reuse: 'LINK_ONLY',
+    lastChecked: '2026-08-18',
+    scope: 'SITE',
+  },
+  {
     id: 'unesco-250',
     title: 'Great Living Chola Temples — ref. 250',
     publisher: 'UNESCO World Heritage Centre',

@@ -26,15 +26,23 @@ export interface ArchSpec {
   floorY: Record<StructureRole, number>
   door: { w: number; h: number }
   /** Superstructure over the core. */
-  crown: 'ONION_DOME' | 'SHIKHARA' | 'MINAR' | 'ROCK' | 'DEUL' | 'VIMANA' | 'RATHA'
+  crown: 'ONION_DOME' | 'SHIKHARA' | 'MINAR' | 'ROCK' | 'DEUL' | 'VIMANA' | 'RATHA' | 'CHHATRI_ROW'
   /** Roof over the remaining documented buildings. */
   roof: 'DOMED_FLAT' | 'PYRAMID' | 'FLAT' | 'ROCK' | 'TIERED'
   /** Wall articulation. */
   facade: 'PISHTAQ' | 'JANGHA' | 'FLUTED' | 'ROCK' | 'DRAVIDIAN' | 'COLONNADE'
   /** Gate treatment for ENTRANCE spaces. */
-  gate: 'DARWAZA' | 'GOPURAM' | 'TORANA' | 'RUIN' | 'VERANDAH'
+  gate: 'DARWAZA' | 'GOPURAM' | 'TORANA' | 'RUIN' | 'VERANDAH' | 'BASTION_GATE'
   /** Landscape identity. */
-  land: 'CHARBAGH' | 'TEMPLE_COURT' | 'DESERT_COMPLEX' | 'GORGE' | 'COASTAL' | 'BOULDER_FIELD' | 'PLAZA'
+  land:
+    | 'CHARBAGH'
+    | 'TEMPLE_COURT'
+    | 'DESERT_COMPLEX'
+    | 'GORGE'
+    | 'COASTAL'
+    | 'BOULDER_FIELD'
+    | 'PLAZA'
+    | 'FORT_BASTION'
   extras: (
     | 'MINARETS'
     | 'CHATTRIS'
@@ -47,6 +55,7 @@ export interface ArchSpec {
     | 'FRAGMENTS'
     | 'SCREEN'
     | 'BALCONIES'
+    | 'BASTIONS'
   )[]
 }
 
@@ -153,6 +162,31 @@ export const ARCH_SPEC: Record<Archetype, ArchSpec> = {
     land: 'TEMPLE_COURT',
     extras: ['PRAKARA', 'FRAGMENTS'],
   },
+  /**
+   * A fortified Mughal palace, not a single-building shrine: the core is the
+   * great audience hall rather than a domed tomb or a temple sanctum, the
+   * facade is the cusped-arch colonnade of that tradition, the roofline is flat
+   * with a parapet and a row of chhatris rather than one tall crown, and the
+   * defining silhouette — the thick red sandstone curtain wall, its bastions
+   * and its monumental gate — comes from the FORT_BASTION land profile in
+   * environment.ts rather than from the core building alone.
+   */
+  RED_FORT: {
+    ground: 250,
+    planScale: 0.46,
+    coreW: [18, 30],
+    coreD: [13, 20],
+    wallT: 1.9,
+    wallH: H(11, 8.5, 1.3, 13, 1.0),
+    floorY: H(1.6, 1.3, 0.4, 1.8, 1.6),
+    door: { w: 5.2, h: 7.6 },
+    crown: 'CHHATRI_ROW',
+    roof: 'FLAT',
+    facade: 'PISHTAQ',
+    gate: 'BASTION_GATE',
+    land: 'FORT_BASTION',
+    extras: ['BALCONIES', 'BASTIONS'],
+  },
   RUIN_COMPLEX: {
     ground: 214,
     planScale: 0.5,
@@ -180,4 +214,5 @@ export const CROWN_HEIGHT: Record<ArchSpec['crown'], number> = {
   DEUL: 34,
   VIMANA: 46,
   RATHA: 14,
+  CHHATRI_ROW: 5,
 }

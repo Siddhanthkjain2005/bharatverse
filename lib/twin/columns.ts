@@ -148,7 +148,7 @@ function clearRoutes(
 export function columnGroups(spaces: WorldSpace[], spec: ArchSpec, clearways: Clearway[] = []): ColumnGroup[] {
   const style = COLUMN_STYLE[spec.facade]
   const out: ColumnGroup[] = []
-  const cloisterLands: ArchSpec['land'][] = ['TEMPLE_COURT', 'DESERT_COMPLEX', 'BOULDER_FIELD', 'PLAZA']
+  const cloisterLands: ArchSpec['land'][] = ['TEMPLE_COURT', 'DESERT_COMPLEX', 'BOULDER_FIELD', 'PLAZA', 'FORT_BASTION']
 
   for (const s of spaces) {
     if (s.columns && s.roofed) {

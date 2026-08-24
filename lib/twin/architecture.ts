@@ -45,6 +45,7 @@ const LEXICON: Record<string, Lex> = {
   CHARIOT: { plinth: 'pista', wall: 'jangha', door: 'dvara', cornice: 'kapota', crown: 'deul', column: 'stambha' },
   GOPURAM: { plinth: 'upapitha', wall: 'jangha', door: 'dvara', cornice: 'kapota', crown: 'vimana', column: 'stambha' },
   RUIN_COMPLEX: { plinth: 'jagati', wall: 'wall', door: 'dvara', cornice: 'kapota', crown: 'ratha vimana', column: 'stambha' },
+  RED_FORT: { plinth: 'chabutra', wall: 'facade', door: 'naqqar khana', cornice: 'chhajja', crown: 'chhatri row', column: 'sutun' },
 }
 
 const CROWN_PURPOSE: Record<string, string> = {
@@ -55,7 +56,9 @@ const CROWN_PURPOSE: Record<string, string> = {
   DEUL: 'The sanctum tower rises over the image chamber as the tallest element of the complex, its horizontal courses stepping inward as it climbs.',
   VIMANA: 'The pyramidal tower over the sanctum stacks diminishing storeys, each articulated like a miniature shrine, under a domical cap.',
   RATHA: 'The shrine is crowned by a small tiered tower in the form of a temple chariot, the pattern repeated across the complex at different scales.',
+  CHHATRI_ROW: 'A row of domed kiosks lines the roof parapet, marking the ceremonial hall beneath rather than rising as a single tower — the skyline of a Mughal audience hall rather than a temple or a tomb.',
 }
+
 
 function frame(box: ArchBox, away: number, up: number): ArchComponent['camera'] {
   const cy = (box.y0 + box.y1) / 2
@@ -133,7 +136,7 @@ export function architectureFor(world: WorldModel): ArchComponent[] {
   const gate = world.spaces.find((s) => s.role === 'GATE')
   if (gate) {
     add(
-      'ac-gate', 'Gateway', spec.gate === 'GOPURAM' ? 'gopuram' : spec.gate === 'DARWAZA' ? 'darwaza' : 'gateway',
+      'ac-gate', 'Gateway', spec.gate === 'GOPURAM' ? 'gopuram' : spec.gate === 'DARWAZA' ? 'darwaza' : spec.gate === 'BASTION_GATE' ? 'gateway bastion' : 'gateway',
       'The gate is a building in its own right: it holds the first framed view of the monument and marks the passage from the ordinary world into the enclosure.',
       { cx: gate.rect.cx, cz: gate.rect.cz, w: gate.rect.w, d: gate.rect.d, y0: gate.floorY, y1: gate.floorY + gate.wallH },
       gate.space.evidence, 2, 0.5,

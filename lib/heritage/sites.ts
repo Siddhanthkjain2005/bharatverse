@@ -1616,6 +1616,301 @@ export const SITES: HeritageSite[] = [
   },
 
   {
+    id: 'site-red-fort',
+    slug: 'red-fort',
+    name: 'Red Fort Complex',
+    localName: 'लाल किला',
+    state: 'Delhi',
+    city: 'Delhi',
+    lat: 28.6559,
+    lon: 77.2410,
+    unescoRef: '231',
+    inscribed: '2007',
+    era: 'Mughal',
+    period: '1639–1648 CE',
+    tradition: 'Mughal architecture with Islamic, Persian, Timurid and Hindu traditions',
+    summary:
+      'A palace fort built by the Mughal emperor Shah Jahan as the centre of Shahjahanabad, featuring massive red sandstone walls, ceremonial gates, audience halls, private pavilions and the Nahr-i-Behisht water channel.',
+    heroLine: 'A palace city behind walls of red sandstone.',
+    materials: ['Red sandstone', 'White marble', 'Decorative stone inlay'],
+    palette: { stone: '#8f4f3a', accent: '#d6a15b', sky: '#181820' },
+
+    facts: [
+      {
+        id: 'f-rf-patron',
+        label: 'Patron',
+        value: 'Mughal emperor Shah Jahan',
+        evidence: 'VERIFIED_FACT',
+        sourceIds: ['unesco-231'],
+      },
+      {
+        id: 'f-rf-construction',
+        label: 'Construction',
+        value: 'Construction began in 1639 and was completed in 1648 as part of the development of Shahjahanabad',
+        evidence: 'VERIFIED_FACT',
+        sourceIds: ['unesco-231'],
+      },
+      {
+        id: 'f-rf-purpose',
+        label: 'Purpose',
+        value: 'Palace fort and imperial residence of Shahjahanabad, the new Mughal capital',
+        evidence: 'VERIFIED_FACT',
+        sourceIds: ['unesco-231'],
+      },
+      {
+        id: 'f-rf-material',
+        label: 'Walls',
+        value: 'The fort takes its name from its massive enclosing walls constructed in red sandstone',
+        evidence: 'VERIFIED_FACT',
+        sourceIds: ['unesco-231'],
+      },
+      {
+        id: 'f-rf-unesco',
+        label: 'World Heritage',
+        value: 'Inscribed on the UNESCO World Heritage List in 2007 under criteria (ii), (iii) and (vi)',
+        evidence: 'VERIFIED_FACT',
+        sourceIds: ['unesco-231'],
+      },
+    ],
+
+    twin: {
+      archetype: 'RED_FORT',
+      provenance: 'REFERENCE_RECONSTRUCTION',
+      provenanceNote:
+        'Reference massing reconstruction of the Red Fort Complex based on published institutional descriptions and documented architectural elements. It is an orientation and storytelling model, not a survey-grade scan.',
+      interiorLevel: 4,
+      interiorNote:
+        'The palace rooms, courtyards and circulation routes are represented as schematic spatial interpretations based on documented descriptions. They are not an authorized interior capture.',
+    },
+
+    hotspots: [
+      {
+        id: 'hs-rf-lahori',
+        name: 'Lahori Gate',
+        kind: 'ARCHITECTURE',
+        position: [0, 9, 18],
+        camera: { position: [18, 12, 34], target: [0, 8, 12] },
+        summary:
+          'The Lahori Gate is one of the principal monumental entrances to the Red Fort and forms the public-facing gateway into the complex.',
+        evidence: 'VERIFIED_FACT',
+        sourceIds: ['unesco-231'],
+      },
+      {
+        id: 'hs-rf-diwan',
+        name: 'Diwan-i-Am',
+        kind: 'ARCHITECTURE',
+        position: [0, 7, 2],
+        camera: { position: [15, 10, 22], target: [0, 6, 2] },
+        summary:
+          'The public audience hall formed part of the ceremonial sequence between the fort entrance and the imperial palace apartments.',
+        evidence: 'VERIFIED_FACT',
+        sourceIds: ['unesco-231'],
+      },
+      {
+        id: 'hs-rf-nahr',
+        name: 'Nahr-i-Behisht',
+        kind: 'ARCHITECTURE',
+        position: [4, 5, -7],
+        camera: { position: [14, 8, 12], target: [4, 5, -7] },
+        summary:
+          'The Nahr-i-Behisht, or Stream of Paradise, is the continuous water channel connecting the private palace pavilions.',
+        evidence: 'VERIFIED_FACT',
+        sourceIds: ['unesco-231'],
+      },
+      {
+        id: 'hs-rf-marble',
+        name: 'Marble palace pavilions',
+        kind: 'MATERIAL',
+        position: [-4, 8, -8],
+        camera: { position: [-16, 11, 15], target: [-4, 7, -8] },
+        summary:
+          'The private apartments include finely proportioned pavilions whose marble architecture expresses the refined Mughal palace style.',
+        evidence: 'VERIFIED_FACT',
+        sourceIds: ['unesco-231'],
+      },
+      {
+        id: 'hs-rf-salimgarh',
+        name: 'Salimgarh Fort',
+        kind: 'HISTORICAL_EVENT',
+        position: [15, 6, -12],
+        camera: { position: [28, 11, 12], target: [15, 5, -12] },
+        summary:
+          'The older Salimgarh Fort, built in 1546, stands adjacent to the Red Fort and forms part of the UNESCO Red Fort Complex.',
+        evidence: 'VERIFIED_FACT',
+        sourceIds: ['unesco-231'],
+      },
+    ],
+
+    spaces: [
+      {
+        id: 'sp-rf-lahori',
+        name: 'Lahori Gate approach',
+        parentId: null,
+        kind: 'ENTRANCE',
+        plan: { x: 0.42, y: 0.84, w: 0.16, h: 0.12 },
+        narrative:
+          'The monumental entrance sequence begins at the Lahori Gate before continuing into the fort complex.',
+        evidence: 'VERIFIED_FACT',
+        accessibility: 'Information not yet verified.',
+        sourceIds: ['unesco-231'],
+      },
+      {
+        id: 'sp-rf-bazaar',
+        name: 'Chhatta Chowk',
+        parentId: 'sp-rf-lahori',
+        kind: 'GALLERY',
+        plan: { x: 0.36, y: 0.7, w: 0.28, h: 0.12 },
+        narrative:
+          'The covered bazaar forms part of the approach from the Lahori Gate toward the inner ceremonial spaces.',
+        evidence: 'VERIFIED_FACT',
+        accessibility: 'Information not yet verified.',
+        sourceIds: ['unesco-231'],
+      },
+      {
+        id: 'sp-rf-courtyard',
+        name: 'Imperial courtyard',
+        parentId: 'sp-rf-bazaar',
+        kind: 'COURTYARD',
+        plan: { x: 0.18, y: 0.42, w: 0.64, h: 0.3 },
+        narrative:
+          'The inner complex organizes ceremonial and residential spaces around open courts and garden areas.',
+        evidence: 'INTERPRETATION',
+        accessibility: 'Information not yet verified.',
+        sourceIds: ['unesco-231'],
+      },
+      {
+        id: 'sp-rf-palace',
+        name: 'Private palace apartments',
+        parentId: 'sp-rf-courtyard',
+        kind: 'HALL',
+        plan: { x: 0.28, y: 0.16, w: 0.44, h: 0.16 },
+        narrative:
+          'The private apartments form a sequence of pavilions connected by the Nahr-i-Behisht.',
+        evidence: 'VERIFIED_FACT',
+        accessibility: 'Information not yet verified.',
+        sourceIds: ['unesco-231'],
+      },
+    ],
+
+    timeline: [
+      {
+        id: 'tl-rf-1',
+        year: '1639',
+        anchor: 1639,
+        title: 'Construction begins',
+        detail:
+          'Shah Jahan begins construction of the Red Fort as part of the development of Shahjahanabad.',
+        evidence: 'VERIFIED_FACT',
+        sourceIds: ['unesco-231'],
+        twinState: 'FOUNDATION',
+      },
+      {
+        id: 'tl-rf-2',
+        year: '1648',
+        anchor: 1648,
+        title: 'Fort completed',
+        detail:
+          'The principal construction of the Red Fort is completed as the Mughal capital develops around it.',
+        evidence: 'VERIFIED_FACT',
+        sourceIds: ['unesco-231'],
+        twinState: 'COMPLETE',
+      },
+      {
+        id: 'tl-rf-3',
+        year: '1857',
+        anchor: 1857,
+        title: 'British military occupation',
+        detail:
+          'The Red Fort Complex reflects a later phase of British military occupation, which introduced new buildings and functions.',
+        evidence: 'VERIFIED_FACT',
+        sourceIds: ['unesco-231'],
+        twinState: 'DAMAGED',
+      },
+      {
+        id: 'tl-rf-4',
+        year: '1947',
+        anchor: 1947,
+        title: 'Independence era',
+        detail:
+          'The Red Fort became associated with the celebration of Indian independence and remains a major national symbol.',
+        evidence: 'VERIFIED_FACT',
+        sourceIds: ['unesco-231'],
+        twinState: 'RESTORED',
+      },
+      {
+        id: 'tl-rf-5',
+        year: '2007',
+        anchor: 2007,
+        title: 'World Heritage inscription',
+        detail:
+          'The Red Fort Complex is inscribed on the UNESCO World Heritage List as reference 231.',
+        evidence: 'VERIFIED_FACT',
+        sourceIds: ['unesco-231'],
+        twinState: 'RESTORED',
+      },
+    ],
+
+    stories: [
+      {
+        mode: 'THIRTY_SECOND',
+        label: '30 seconds',
+        body:
+          'The Red Fort was built by Shah Jahan as the palace fort of Shahjahanabad. Its red sandstone walls enclosed a refined Mughal palace whose pavilions, gardens and water channels combined Islamic, Persian, Timurid and Hindu traditions.',
+        evidence: 'AI_ASSISTED_SUMMARY',
+        sourceIds: ['unesco-231'],
+      },
+      {
+        mode: 'SCHOLAR',
+        label: 'Scholar',
+        body:
+          'The Red Fort represents a culmination of Mughal architectural development, combining imported Islamic, Persian and Timurid ideas with local Hindu traditions. Its planning, architectural components and garden design influenced later buildings and gardens across northern India.',
+        evidence: 'INTERPRETATION',
+        sourceIds: ['unesco-231'],
+      },
+    ],
+
+    conservation: {
+      dataClass: 'DEMO_SYNTHETIC',
+      healthIndex: null,
+      indicators: [
+        {
+          id: 'ci-rf-1',
+          label: 'Red sandstone fabric',
+          score: 0,
+          trend: 'UNKNOWN',
+          note: 'Synthetic fixture — not a heritage finding.',
+        },
+        {
+          id: 'ci-rf-2',
+          label: 'Palace masonry',
+          score: 0,
+          trend: 'UNKNOWN',
+          note: 'Synthetic fixture — not a heritage finding.',
+        },
+        {
+          id: 'ci-rf-3',
+          label: 'Garden and water features',
+          score: 0,
+          trend: 'UNKNOWN',
+          note: 'Synthetic fixture — not a heritage finding.',
+        },
+      ],
+      inspections: [],
+      comparison: null,
+    },
+
+    visit: {
+      openingHours: null,
+      ticketing: null,
+      bestTime: null,
+      accessibility: null,
+      nearestTransit: null,
+    },
+
+    sourceIds: ['unesco-231', 'asi'],
+  },
+
+  {
     id: 'site-thanjavur',
     slug: 'brihadisvara-thanjavur',
     name: 'Brihadisvara Temple, Thanjavur',
