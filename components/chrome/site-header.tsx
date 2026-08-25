@@ -37,11 +37,7 @@ export function SiteHeader() {
       )}
     >
       <div className="mx-auto flex h-14 max-w-[110rem] items-center gap-6 px-5 md:px-8">
-        <Link href="/" className="group flex items-center gap-2.5">
-          <span aria-hidden className="relative grid size-6 place-items-center">
-            <span className="absolute inset-0 rotate-45 border border-primary/70 transition-transform duration-500 group-hover:rotate-[135deg]" />
-            <span className="size-1.5 rounded-full bg-accent" />
-          </span>
+        <Link href="/" className="group flex items-center">
           <span className="font-sans text-[0.8125rem] font-medium uppercase tracking-[0.26em] text-foreground">
             Bharatverse
           </span>
