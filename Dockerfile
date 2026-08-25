@@ -1,9 +1,7 @@
-# syntax=docker/dockerfile:1
-
 FROM node:22-alpine AS base
 ENV PNPM_HOME=/pnpm
 ENV PATH=$PNPM_HOME:$PATH
-RUN corepack enable
+RUN npm install --global pnpm@9.15.9
 
 FROM base AS dependencies
 WORKDIR /app
