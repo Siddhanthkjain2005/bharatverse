@@ -7,6 +7,7 @@ import type { SourceRef } from './types'
  * institutional sources and does not rehost their media. `LINK_ONLY` sources may
  * be cited and deep-linked but never ingested as media.
  */
+
 export const SOURCES: SourceRef[] = [
   {
     id: 'unesco-whc',
@@ -15,9 +16,10 @@ export const SOURCES: SourceRef[] = [
     url: 'https://whc.unesco.org/en/statesparties/in',
     license: 'UNESCO terms of use',
     reuse: 'LINK_ONLY',
-    lastChecked: '2026-08-18',
+    lastChecked: '2026-08-24',
     scope: 'NATIONAL',
   },
+
   {
     id: 'unesco-252',
     title: 'Taj Mahal — World Heritage List ref. 252',
@@ -28,6 +30,7 @@ export const SOURCES: SourceRef[] = [
     lastChecked: '2026-08-18',
     scope: 'SITE',
   },
+
   {
     id: 'unesco-241',
     title: 'Group of Monuments at Hampi — ref. 241',
@@ -38,6 +41,7 @@ export const SOURCES: SourceRef[] = [
     lastChecked: '2026-08-18',
     scope: 'SITE',
   },
+
   {
     id: 'unesco-246',
     title: 'Sun Temple, Konârak — ref. 246',
@@ -48,6 +52,7 @@ export const SOURCES: SourceRef[] = [
     lastChecked: '2026-08-18',
     scope: 'SITE',
   },
+
   {
     id: 'unesco-242',
     title: 'Ajanta Caves — ref. 242',
@@ -58,6 +63,7 @@ export const SOURCES: SourceRef[] = [
     lastChecked: '2026-08-18',
     scope: 'SITE',
   },
+
   {
     id: 'unesco-240',
     title: 'Khajuraho Group of Monuments — ref. 240',
@@ -68,6 +74,7 @@ export const SOURCES: SourceRef[] = [
     lastChecked: '2026-08-18',
     scope: 'SITE',
   },
+
   {
     id: 'unesco-233',
     title: 'Qutb Minar and its Monuments, Delhi — ref. 233',
@@ -78,6 +85,7 @@ export const SOURCES: SourceRef[] = [
     lastChecked: '2026-08-18',
     scope: 'SITE',
   },
+
   {
     id: 'unesco-231',
     title: 'Red Fort Complex — ref. 231',
@@ -98,6 +106,7 @@ export const SOURCES: SourceRef[] = [
     lastChecked: '2026-08-18',
     scope: 'SITE',
   },
+
   {
     id: 'unesco-249',
     title: 'Group of Monuments at Mahabalipuram — ref. 249',
@@ -108,6 +117,8 @@ export const SOURCES: SourceRef[] = [
     lastChecked: '2026-08-18',
     scope: 'SITE',
   },
+
+
   {
     id: 'asi',
     title: 'Archaeological Survey of India — Monuments',
@@ -118,6 +129,7 @@ export const SOURCES: SourceRef[] = [
     lastChecked: '2026-08-18',
     scope: 'NATIONAL',
   },
+
   {
     id: 'asi-tickets',
     title: 'ASI Online Ticketing — monument entry information',
@@ -128,6 +140,7 @@ export const SOURCES: SourceRef[] = [
     lastChecked: '2026-08-18',
     scope: 'NATIONAL',
   },
+
   {
     id: 'moc',
     title: 'Ministry of Culture, Government of India',
@@ -138,6 +151,7 @@ export const SOURCES: SourceRef[] = [
     lastChecked: '2026-08-18',
     scope: 'NATIONAL',
   },
+
   {
     id: 'incredible-india',
     title: 'Incredible India — official tourism portal',
@@ -148,6 +162,7 @@ export const SOURCES: SourceRef[] = [
     lastChecked: '2026-08-18',
     scope: 'NATIONAL',
   },
+
   {
     id: 'nmma',
     title: 'National Mission on Monuments and Antiquities',
@@ -158,6 +173,7 @@ export const SOURCES: SourceRef[] = [
     lastChecked: '2026-08-18',
     scope: 'NATIONAL',
   },
+
   {
     id: 'osm',
     title: 'OpenStreetMap — geographic base data',
@@ -168,6 +184,7 @@ export const SOURCES: SourceRef[] = [
     lastChecked: '2026-08-18',
     scope: 'GLOBAL',
   },
+
   {
     id: 'google-places',
     title: 'Google Places API — live business details, ratings and reviews',
@@ -178,6 +195,7 @@ export const SOURCES: SourceRef[] = [
     lastChecked: '2026-08-23',
     scope: 'GLOBAL',
   },
+
   {
     id: 'google-routes',
     title: 'Google Routes API — driving distance and duration',
@@ -188,6 +206,7 @@ export const SOURCES: SourceRef[] = [
     lastChecked: '2026-08-23',
     scope: 'GLOBAL',
   },
+
   {
     id: 'groq',
     title: 'GroqCloud — grounded language-model inference',
@@ -198,6 +217,7 @@ export const SOURCES: SourceRef[] = [
     lastChecked: '2026-08-23',
     scope: 'GLOBAL',
   },
+
   {
     id: 'bharatverse-demo',
     title: 'BHARATVERSE synthetic inspection fixture set',
@@ -206,6 +226,16 @@ export const SOURCES: SourceRef[] = [
     license: 'Internal demo fixture — not a heritage finding',
     reuse: 'RESTRICTED',
     lastChecked: '2026-08-18',
+    scope: 'SITE',
+  },
+  {
+    id: 'unesco-524',
+    title: 'Buddhist Monuments at Sanchi — World Heritage List ref. 524',
+    publisher: 'UNESCO World Heritage Centre',
+    url: 'https://whc.unesco.org/en/list/524/',
+    license: 'UNESCO terms of use',
+    reuse: 'LINK_ONLY',
+    lastChecked: '2026-08-24',
     scope: 'SITE',
   },
 ]

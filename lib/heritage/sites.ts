@@ -2400,4 +2400,194 @@ export const SITES: HeritageSite[] = [
     },
     sourceIds: ['unesco-249', 'asi', 'incredible-india'],
   },
+  {
+    id: 'site-sanchi',
+    slug: 'sanchi',
+    name: 'Buddhist Monuments at Sanchi',
+    localName: 'सांची',
+    state: 'Madhya Pradesh',
+    city: 'Sanchi',
+    lat: 23.4793,
+    lon: 77.7397,
+    unescoRef: '524',
+    inscribed: '1989',
+    era: 'Ancient India',
+    period: '3rd century BCE–12th century CE',
+    tradition: 'Buddhist',
+    summary:
+      'The Buddhist Monuments at Sanchi comprise stupas, temples, monasteries and pillars that document the development of Buddhist architecture and art in India.',
+    heroLine: 'A thousand years of Buddhist heritage carved in stone.',
+    materials: ['Sandstone', 'Brick', 'Stone'],
+
+    facts: [
+      {
+        id: 'sanchi-fact-1',
+        label: 'UNESCO World Heritage Site',
+        value: 'Inscribed in 1989 as Buddhist Monuments at Sanchi, World Heritage reference 524.',
+        evidence: 'VERIFIED_FACT',
+        sourceIds: ['unesco-524'],
+      },
+      {
+        id: 'sanchi-fact-2',
+        label: 'Origins',
+        value: 'The site originated under the Mauryan emperor Ashoka in the 3rd century BCE.',
+        evidence: 'VERIFIED_FACT',
+        sourceIds: ['unesco-524'],
+      },
+    ],
+
+    twin: {
+      archetype: 'RUIN_COMPLEX',
+      provenance: 'REFERENCE_RECONSTRUCTION',
+      provenanceNote:
+        'Procedural reference reconstruction based on documented architectural characteristics. It is not an official survey model.',
+      interiorLevel: 1,
+      interiorNote:
+        'No verified interior reconstruction is provided.',
+    },
+
+    hotspots: [
+      {
+        id: 'sanchi-great-stupa',
+        name: 'Great Stupa',
+        kind: 'ARCHITECTURE',
+        position: [0, 4, 0],
+        camera: {
+          position: [8, 6, 10],
+          target: [0, 3, 0],
+        },
+        summary:
+          'The Great Stupa is the principal monument at Sanchi.',
+        evidence: 'VERIFIED_FACT',
+        sourceIds: ['unesco-524'],
+      },
+      {
+        id: 'sanchi-toranas',
+        name: 'Toranas',
+        kind: 'SCULPTURE',
+        position: [0, 4, 8],
+        camera: {
+          position: [6, 5, 14],
+          target: [0, 4, 8],
+        },
+        summary:
+          'The gateways of the Great Stupa are richly decorated with carved elements.',
+        evidence: 'VERIFIED_FACT',
+        sourceIds: ['unesco-524'],
+      },
+    ],
+
+    spaces: [
+      {
+        id: 'sanchi-main-complex',
+        name: 'Main Monument Complex',
+        parentId: null,
+        kind: 'COURTYARD',
+        plan: {
+          x: 0.1,
+          y: 0.1,
+          w: 0.8,
+          h: 0.8,
+        },
+        narrative:
+          'The monument complex contains the principal stupas, temples and pillars of Sanchi.',
+        evidence: 'VERIFIED_FACT',
+        accessibility: null,
+        sourceIds: ['unesco-524'],
+      },
+    ],
+
+    timeline: [
+      {
+        id: 'sanchi-ashoka',
+        year: '3rd century BCE',
+        anchor: -250,
+        title: 'Foundation under Ashoka',
+        detail:
+          'Sanchi was established as a Buddhist sacred centre during the Mauryan period.',
+        evidence: 'VERIFIED_FACT',
+        sourceIds: ['unesco-524'],
+        twinState: 'FOUNDATION',
+      },
+      {
+        id: 'sanchi-development',
+        year: '2nd–1st century BCE',
+        anchor: -150,
+        title: 'Development of the monuments',
+        detail:
+          'The monument complex was expanded during subsequent periods.',
+        evidence: 'VERIFIED_FACT',
+        sourceIds: ['unesco-524'],
+        twinState: 'CONSTRUCTION',
+      },
+    ],
+
+    stories: [
+      {
+        mode: 'THIRTY_SECOND',
+        label: '30-second overview',
+        body:
+          'Sanchi is one of India’s most important surviving Buddhist monument complexes, preserving stupas, temples, monasteries and pillars.',
+        evidence: 'AI_ASSISTED_SUMMARY',
+        sourceIds: ['unesco-524'],
+      },
+      {
+        mode: 'FIVE_MINUTE',
+        label: 'Five-minute history',
+        body:
+          'Beginning under Ashoka in the 3rd century BCE, Sanchi developed over many centuries into a major Buddhist architectural complex.',
+        evidence: 'AI_ASSISTED_SUMMARY',
+        sourceIds: ['unesco-524'],
+      },
+      {
+        mode: 'CHILD',
+        label: 'For younger visitors',
+        body:
+          'Sanchi is an ancient Buddhist site filled with stupas, stone gateways and monuments.',
+        evidence: 'AI_ASSISTED_SUMMARY',
+        sourceIds: ['unesco-524'],
+      },
+      {
+        mode: 'SCHOLAR',
+        label: 'Scholarly overview',
+        body:
+          'The Sanchi complex documents the evolution of Buddhist architecture and art from the Mauryan period through later historic periods.',
+        evidence: 'AI_ASSISTED_SUMMARY',
+        sourceIds: ['unesco-524'],
+      },
+      {
+        mode: 'FOLKLORE',
+        label: 'Tradition',
+        body:
+          'Sanchi occupies an important place in Buddhist sacred tradition and memory.',
+        evidence: 'ORAL_TRADITION',
+        sourceIds: ['unesco-524'],
+      },
+    ],
+
+    conservation: {
+      dataClass: 'VERIFIED',
+      healthIndex: null,
+      indicators: [],
+      inspections: [],
+      comparison: null,
+    },
+
+    visit: {
+      openingHours: null,
+      ticketing: null,
+      bestTime: null,
+      accessibility: null,
+      nearestTransit: null,
+    },
+
+    sourceIds: ['unesco-524', 'asi'],
+
+    palette: {
+      stone: '#b8a58a',
+      accent: '#8b6f47',
+      sky: '#1b1a22',
+    },
+  },
+
 ]
