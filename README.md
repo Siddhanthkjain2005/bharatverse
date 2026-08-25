@@ -1,6 +1,6 @@
-# Bharatverse AI
+# Bharatverse AI 🇮🇳
 
-**See India before you go. Understand it when you arrive.**
+> **See India before you go. Understand it when you arrive.**
 
 Bharatverse is an evidence-grounded heritage intelligence and travel platform. It connects navigable procedural digital twins, historical reconstruction, a source-bound multilingual guide, and a deterministic journey optimizer so a visitor can move continuously from curiosity to a feasible real-world trip.
 
