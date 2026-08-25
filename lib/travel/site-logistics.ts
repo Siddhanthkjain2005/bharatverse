@@ -37,6 +37,11 @@ export const SITE_LOGISTICS: Record<string, SiteLogistics> = {
     rail: { name: 'New Delhi railway station', approximateDistanceKm: 17 },
     ticketing: { label: 'ASI official ticket portal', url: ASI_TICKETS, note: 'Use the official checkout for the current visitor category and price.' },
   },
+  'red-fort': {
+    airport: { name: 'Indira Gandhi International Airport', code: 'DEL', approximateDistanceKm: 23 },
+    rail: { name: 'New Delhi railway station', approximateDistanceKm: 5 },
+    ticketing: { label: 'ASI official ticket portal', url: ASI_TICKETS, note: 'Use the official checkout for the current visitor category, entry slot and price.' },
+  },
   'brihadisvara-thanjavur': {
     airport: { name: 'Tiruchirappalli International Airport', code: 'TRZ', approximateDistanceKm: 60 },
     rail: { name: 'Thanjavur Junction', approximateDistanceKm: 2 },
@@ -46,6 +51,11 @@ export const SITE_LOGISTICS: Record<string, SiteLogistics> = {
     airport: { name: 'Chennai International Airport', code: 'MAA', approximateDistanceKm: 55 },
     rail: { name: 'Chengalpattu Junction', approximateDistanceKm: 30 },
     ticketing: { label: 'ASI official ticket portal', url: ASI_TICKETS, note: 'The monument group has multiple areas; check the official checkout for current access.' },
+  },
+  sanchi: {
+    airport: { name: 'Raja Bhoj Airport', code: 'BHO', approximateDistanceKm: 55 },
+    rail: { name: 'Sanchi railway station', approximateDistanceKm: 1 },
+    ticketing: { label: 'ASI official ticket portal', url: ASI_TICKETS, note: 'Use the official checkout for current monument access, visitor category and price.' },
   },
 }
 

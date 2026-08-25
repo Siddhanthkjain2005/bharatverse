@@ -532,6 +532,52 @@ function SomaskandaRelief({ space, mats }: { space: WorldSpace; mats: Pack }) {
   )
 }
 
+/** Open-air Buddhist focal group for Sanchi's documented main complex. */
+function SanchiStupaCourt({ space, mats }: { space: WorldSpace; mats: Pack }) {
+  const scale = Math.min(1.35, Math.max(0.78, Math.min(space.rect.w, space.rect.d) / 24))
+  return (
+    <group position={[space.rect.cx, space.floorY, space.rect.cz]} scale={scale}>
+      <mesh position={[0, 0.22, 0]} geometry={box(11.2, 0.44, 11.2, 1.6)} material={mats.dark} castShadow receiveShadow />
+      <mesh position={[0, 0.55, 0]} geometry={cylinder(4.75, 5.15, 0.66, 48, 1)} material={mats.stone} castShadow receiveShadow />
+      <mesh position={[0, 2.35, 0]} scale={[4.65, 2.15, 4.65]} geometry={UNIT_SPHERE_HI} material={mats.alt} castShadow receiveShadow />
+      <mesh position={[0, 4.16, 0]} geometry={box(1.65, 0.62, 1.65, 0.8)} material={mats.dark} castShadow />
+      <mesh position={[0, 5.42, 0]} geometry={cylinder(0.1, 0.13, 2.45, 12, 1)} material={mats.metal} castShadow />
+      {[4.75, 5.35, 5.92].map((y, index) => (
+        <mesh key={y} position={[0, y, 0]} geometry={cylinder(0.72 - index * 0.14, 0.9 - index * 0.14, 0.12, 28, 1)} material={mats.trim} castShadow />
+      ))}
+      <group position={[0, 0, 6.35]}>
+        {[-1.75, 1.75].map((x) => (
+          <group key={x} position={[x, 0, 0]}>
+            <mesh position={[0, 2.25, 0]} geometry={cylinder(0.32, 0.4, 4.5, 16, 1)} material={mats.stone} castShadow />
+            <mesh position={[0, 0.25, 0]} geometry={box(0.95, 0.5, 0.95, 0.8)} material={mats.dark} castShadow receiveShadow />
+          </group>
+        ))}
+        {[2.25, 3.2, 4.15].map((y) => (
+          <mesh key={y} position={[0, y, 0]} geometry={box(4.65, 0.42, 0.72, 0.9)} material={mats.trim} castShadow />
+        ))}
+      </group>
+    </group>
+  )
+}
+
+/** Marble pavilion focal wall and water channel for the Red Fort palace zone. */
+function RedFortPalaceIdentity({ space, mats }: { space: WorldSpace; mats: Pack }) {
+  const rearZ = space.rect.cz - space.rect.d / 2 + 0.5
+  return (
+    <group>
+      <mesh position={[space.rect.cx, space.floorY + 2.8, rearZ]} geometry={box(Math.min(10.5, space.rect.w * 0.7), 5.6, 0.55, 1.2)} material={mats.stone} castShadow receiveShadow />
+      <mesh position={[space.rect.cx, space.floorY + 2.9, rearZ + 0.34]} geometry={torus(1.9, 0.24, 14, 56)} material={mats.trim} castShadow />
+      <mesh position={[space.rect.cx, space.floorY + 0.32, rearZ + 2.1]} geometry={box(5.8, 0.64, 3.2, 1.1)} material={mats.dark} castShadow receiveShadow />
+      <mesh position={[space.rect.cx, space.floorY + 0.74, rearZ + 1.9]} geometry={box(4.7, 0.22, 2.45, 0.9)} material={mats.stone} castShadow />
+      {[-1, 1].map((side) => (
+        <mesh key={side} position={[space.rect.cx + side * 3.85, space.floorY + 2.55, rearZ + 0.38]} geometry={cylinder(0.25, 0.34, 4.8, 18, 1)} material={mats.alt} castShadow />
+      ))}
+      <mesh position={[space.rect.cx, space.floorY + 0.09, space.rect.cz + space.rect.d * 0.1]} geometry={box(1.15, 0.18, space.rect.d * 0.72, 0.75)} material={mats.stone} receiveShadow />
+      <mesh position={[space.rect.cx, space.floorY + 0.2, space.rect.cz + space.rect.d * 0.1]} geometry={box(0.62, 0.08, space.rect.d * 0.68, 0.65)} material={mats.metal} receiveShadow />
+    </group>
+  )
+}
+
 export function InteriorArtefacts({ world, mats }: { world: WorldModel; mats: TwinMaterials }) {
   const pack: Pack = {
     stone: mats.pick(mats.m.stoneAlt, 'INTERPRETIVE'),
@@ -556,6 +602,8 @@ export function InteriorArtefacts({ world, mats }: { world: WorldModel; mats: Tw
   const brihadSanctum = room(world, 'sp-t-sanctum')
   const mahaShrine = room(world, 'sp-m-shrine')
   const mahaHall = room(world, 'sp-m-mandapa')
+  const redFortPalace = room(world, 'sp-rf-palace')
+  const sanchiCourt = room(world, 'sanchi-main-complex')
 
   return (
     <group>
@@ -606,6 +654,9 @@ export function InteriorArtefacts({ world, mats }: { world: WorldModel; mats: Tw
       {mahaShrine && <RitualFurnishings space={mahaShrine} mats={pack} />}
       {mahaHall && <ReliefRegister space={mahaHall} mats={pack} count={8} />}
       {mahaHall && <SideSculptureNiches space={mahaHall} mats={pack} count={4} />}
+
+      {redFortPalace && <RedFortPalaceIdentity space={redFortPalace} mats={pack} />}
+      {sanchiCourt && <SanchiStupaCourt space={sanchiCourt} mats={pack} />}
     </group>
   )
 }

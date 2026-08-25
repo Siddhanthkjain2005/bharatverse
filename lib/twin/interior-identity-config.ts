@@ -39,6 +39,11 @@ const IDENTITY_BY_SITE: Record<string, InteriorIdentityConfig> = {
     label: 'Minaret spiral stair',
     caption: 'The central newel and walkable spiral stair identify the virtual interior of the minaret base.',
   },
+  'red-fort': {
+    spaceId: 'sp-rf-palace',
+    label: 'Marble palace pavilion',
+    caption: 'A marble jharokha reference, low imperial platform and the Nahr-i-Behisht water channel identify the private palace sequence.',
+  },
   'brihadisvara-thanjavur': {
     spaceId: 'sp-t-sanctum',
     label: 'Great linga sanctum',
@@ -48,6 +53,11 @@ const IDENTITY_BY_SITE: Record<string, InteriorIdentityConfig> = {
     spaceId: 'sp-m-shrine',
     label: 'Shore shrine sanctum',
     caption: 'A linga, guardian pair and Nandi frieze establish the identity of the compact coastal shrine interior.',
+  },
+  sanchi: {
+    spaceId: 'sanchi-main-complex',
+    label: 'Great Stupa court',
+    caption: 'A hemispherical stupa reference, harmika, triple chattra and carved torana establish Sanchi’s Buddhist monument identity.',
   },
 }
 
